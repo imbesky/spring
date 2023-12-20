@@ -15,7 +15,7 @@ Records of studying with lectures [inflearn: Conquering spring](https://www.infl
 
 ## Basic Fundamentals
 
-### Index
+### Sections
 
 1. spring and object-oriented programming
 2. understanding fundamentals 1; with examples
