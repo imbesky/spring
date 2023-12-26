@@ -1,6 +1,6 @@
 package besky.basicfundamentals;
 
-import besky.basicfundamentals.member.domain.Grade;
+import besky.basicfundamentals.member.constant.Grade;
 import besky.basicfundamentals.member.domain.Member;
 import besky.basicfundamentals.member.domain.MemberDto;
 import besky.basicfundamentals.member.service.MemberService;

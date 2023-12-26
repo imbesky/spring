@@ -1,5 +1,7 @@
 package besky.basicfundamentals.member.domain;
 
+import besky.basicfundamentals.member.constant.Grade;
+
 public class Member {
     private final Long id;
     private final String name;
