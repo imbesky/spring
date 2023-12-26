@@ -1,9 +1,8 @@
 package besky.basicfundamentals.member.service;
 
 import besky.basicfundamentals.member.domain.Member;
-import besky.basicfundamentals.member.domain.MemberDto;
 
 public interface MemberService {
-    Member join(MemberDto memberDto);
+    Member join(Member member);
     Member findMemberById(Long id);
 }

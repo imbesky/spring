@@ -1,7 +1,6 @@
 package besky.basicfundamentals.member.repository;
 
 import besky.basicfundamentals.member.domain.Member;
-import besky.basicfundamentals.member.domain.MemberDto;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -10,9 +9,8 @@ public class MemoryMemberRepository implements MemberRepository{
     // use ConCurrentHashMap in real project
 
     @Override
-    public Member save(MemberDto memberDto) {
-        Member member = Member.of(memberDto);
-        storage.put(memberDto.id(), member);
+    public Member save(Member member) {
+        storage.put(member.getId(), member);
         return member;
     }
 

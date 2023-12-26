@@ -4,7 +4,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 import besky.basicfundamentals.member.constant.Grade;
 import besky.basicfundamentals.member.domain.Member;
-import besky.basicfundamentals.member.domain.MemberDto;
 import besky.basicfundamentals.member.service.MemberService;
 import besky.basicfundamentals.member.service.MemberServiceImpl;
 import org.junit.jupiter.api.DisplayName;
@@ -15,9 +14,7 @@ public class MemberServiceTest {
     @Test
     @DisplayName("member join test")
     void join(){
-        MemberDto memberDto = new MemberDto(0L, "name", Grade.VIP);
-
-        Member joinedMember = memberService.join(memberDto);
+        Member joinedMember = memberService.join(new Member(0L, "name", Grade.VIP));
         Member findedMember = memberService.findMemberById(0L);
 
         assertThat(joinedMember == findedMember).isTrue();

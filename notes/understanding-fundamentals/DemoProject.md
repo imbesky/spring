@@ -14,3 +14,10 @@
 - Discount policy is based on the order
     - All VIP members always get 1,000won discount (changeable)
     - discount policy is very changeable; uncertain, even can be cancelled
+
+#### Sequence
+
+1. order
+2. inquire member
+3. apply discount
+4. return result

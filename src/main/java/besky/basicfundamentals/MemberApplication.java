@@ -2,7 +2,6 @@ package besky.basicfundamentals;
 
 import besky.basicfundamentals.member.constant.Grade;
 import besky.basicfundamentals.member.domain.Member;
-import besky.basicfundamentals.member.domain.MemberDto;
 import besky.basicfundamentals.member.service.MemberService;
 import besky.basicfundamentals.member.service.MemberServiceImpl;
 
@@ -11,9 +10,7 @@ public class MemberApplication {
         //violate DIP by depending on both abstraction and detail
         MemberService memberService = new MemberServiceImpl();
 
-        MemberDto memberDto = new MemberDto(0L, "name", Grade.VIP);
-
-        Member joinedMember = memberService.join(memberDto);
+        Member joinedMember = memberService.join(new Member(0L, "name", Grade.VIP));
         Member findedMember = memberService.findMemberById(0L);
 
         System.out.println(
