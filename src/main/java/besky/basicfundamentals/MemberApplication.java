@@ -7,8 +7,8 @@ import besky.basicfundamentals.member.service.MemberServiceImpl;
 
 public class MemberApplication {
     public static void main(String[] args) {
-        //violate DIP by depending on both abstraction and detail
-        MemberService memberService = new MemberServiceImpl();
+        AppConfig appConfig = new AppConfig();
+        MemberService memberService = appConfig.memberService();
 
         Member joinedMember = memberService.join(new Member(0L, "name", Grade.VIP));
         Member findedMember = memberService.findMemberById(0L);

@@ -6,7 +6,11 @@ import besky.basicfundamentals.member.repository.MemoryMemberRepository;
 
 public class MemberServiceImpl implements MemberService{
     //violate DIP by depending on both abstraction and detail
-    private final MemberRepository memberRepository = new MemoryMemberRepository();
+    private final MemberRepository memberRepository;
+
+    public MemberServiceImpl(MemoryMemberRepository memoryMemberRepository) {
+        this.memberRepository = memoryMemberRepository;
+    }
 
     @Override
     public Member join(Member member) {

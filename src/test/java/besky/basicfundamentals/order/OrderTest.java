@@ -2,16 +2,25 @@ package besky.basicfundamentals.order;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+import besky.basicfundamentals.AppConfig;
 import besky.basicfundamentals.member.constant.Grade;
 import besky.basicfundamentals.member.domain.Member;
 import besky.basicfundamentals.member.service.MemberService;
 import besky.basicfundamentals.member.service.MemberServiceImpl;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 public class OrderTest {
-    MemberService memberService = new MemberServiceImpl();
-    OrderService orderService = new OrderServiceImpl();
+    MemberService memberService;
+    OrderService orderService;
+
+    @BeforeEach
+    public void beforeEach(){
+        AppConfig appConfig = new AppConfig();
+        memberService = appConfig.memberService();
+        orderService = appConfig.orderService();
+    }
 
     @Test
     @DisplayName("create order")
