@@ -83,3 +83,8 @@ responsible to configure application
 - 생성자를 통해 어떤 구현 객체가 들어올 지 알 수 없음
 - 생성자를 통해 어떤 구현 객체를 주입할지는 오직 `AppConfig`에서 결정
 - `Impl` 파일들은 의존관계에 대한 고민의 책임은 없고 실행에만 집중 가능
+
+## Spring
+
+- `ApplicationContext` is spring container
+- using `getBean()` method, can find spring beans(object)
