@@ -9,11 +9,19 @@ import besky.basicfundamentals.order.OrderServiceImpl;
 
 public class AppConfig {
     public MemberService memberService(){
-        return new MemberServiceImpl(new MemoryMemberRepository());
+        return new MemberServiceImpl(getMemberRepository());
+    }
+
+    private MemoryMemberRepository getMemberRepository() {
+        return new MemoryMemberRepository();
     }
 
     public OrderService orderService(){
-        return new OrderServiceImpl(new MemoryMemberRepository(), new RateDiscountPolicy());
+        return new OrderServiceImpl(getMemberRepository(), getDiscountPolicy());
+    }
+
+    private RateDiscountPolicy getDiscountPolicy() {
+        return new RateDiscountPolicy();
     }
 
 }

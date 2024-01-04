@@ -67,6 +67,11 @@ responsible to configure application
 - create object
 - inject reference by using constructor
 
+#### Refactoring
+
+- show distinct role and its implementation
+- remove duplication
+
 ### DI
 
 - 객체를 생성하고 그 참조값을 `Impl`이 생성되면 생성자로 전달
