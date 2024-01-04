@@ -22,14 +22,14 @@ provision of a single interface to entities of different types
 
 ## SOLID
 
-using polymorphism alone cannot fully follows the principles
+using polymorphism alone cannot fully follow the principles
 
 ### SRP
 
 Single Responsibility Principle
 
 - standard of single responsibility is change
-- the effect of change should be minimalized
+- the effect of change should be minimized
 
 ### OCP
 
